@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eloquent JS — chpt 2 prob — Looping A Triangle</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <script>
+      var octothorpe = "#";
+
+      while (octothorpe.length < 8) {
+        console.log(octothorpe);
+        octothorpe = octothorpe + "#";
+      };
+
+    </script>
+  </head>
+  <body>
+    <h1>Eloquent JavaScript</h1>
+    <h2>Chapter 2 &mdash; Program Structure</h2>
+    <p>Problem 1 - Looping a Triangle</p>
+    <hr>
+    <p>Write a loop that makes seven calls to console.log to output the
+    following triangle:
+
+    <p>#</p>
+    <p>##</p>
+    <p>###</p>
+    <p>####</p>
+    <p>#####</p>
+    <p>######</p>
+    <p>#######</p>
+
+    <hr>
+    <p>View solution in console</p>
+    <p class="explanation">I made one mistake in my original solution. I made this incorrect statement in the
+    while loop: octothorpe = octothorpe + octothorpe; but this was wrong because
+    I was reassigning the value of the variable and then adding those two
+    reassigned variable values together on the second iteration, resulting in
+    "####" instead of "##".</p>
+  </body>
+</html>
