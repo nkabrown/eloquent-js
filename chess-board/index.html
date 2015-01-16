@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eloquent JS &mdash; chpt 2 &mdash; Chess Board</title>
+    <link rel="stylesheet" href="../main.css" type="text/css">
+    <script>
+      var size = 12;
+      var result = "\n";
+
+      for (i = 1; i <= size; i++) {
+        for (j = 1; j <= size; j++) {
+          if ((i + j)% 2 == 0) {
+            result = result + "#";
+          } else {
+            result = result + " ";
+          }
+        }
+        result = result + "\n";
+      };
+      console.log(result);
+    </script>
+  </head>
+  <body>
+    <h1>Eloquent JavaScript</h1>
+    <h2>Chapter 2 &mdash; Program Structure</h2>
+    <p>Problem 3 - Chess Board</p>
+    <hr>
+    <p>Write a program that creates a string that represents an 8x8 grid, using
+    newline characters to seperate lines. At each position of the gird there is
+    either a space or a "#" character. The characters should form a chess
+    board.</p>
+    <p>When you have a program that generates this pattern, define a variable
+    size=8 and change the program so that it works for any size, outputting a
+    grid of the given width and height.</p>
+    <p>Passing this string to console.log should show something like this: 
+    <hr>
+    <p>&nbsp; # # # #</p>
+    <p># # # #</p>
+    <p>&nbsp; # # # #</p>
+    <p># # # #</p>
+    <p>&nbsp; # # # # </p>
+    <p># # # #</p>
+    <p>&nbsp; # # # # </p>
+    <p># # # #</p>
+    <hr>
+    <p>View the solution in the console</p>
