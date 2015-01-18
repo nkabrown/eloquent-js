@@ -3,7 +3,10 @@
   <head>
     <title>Eloquent JS &mdash; chpt 2 prob &mdash; Looping A Triangle</title>
     <link rel="stylesheet" href="../main.css" type="text/css">
+    <link rel="stylesheet" href="../github.css" type="text/css">
+    <script src="../highlight.pack.js"></script>
     <script>
+
       var octothorpe = "#";
 
       while (octothorpe.length < 8) {
@@ -36,5 +39,26 @@
     I was reassigning the value of the variable and then adding those two
     reassigned variable values together on the second iteration, resulting in
     "####" instead of "##".</p>
+    <hr>
+    <p>SOLUTION</p>
+    <p class="sample-language">JavaScript</p>
+    <pre><code class="javascript">
+      var octothorpe = "#";
+
+      while (octothorpe.length < 8) {
+        console.log(octothorpe);
+        octothorpe = octothorpe + "#";
+      };
+    </pre></code>
+    <p class="sample-language">Ruby</p>
+    <pre><code class="ruby">
+      octothorpe = "#"
+
+      while octothorpe.length < 8
+        puts octothorpe
+        octothorpe = octothorpe + "#"
+      end
+    </pre></code>
+  <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

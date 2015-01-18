@@ -3,8 +3,10 @@
   <head>
     <title>Eloquent JS &mdash; chpt 2 &mdash; Fizzbuzz</title>
     <link rel="stylesheet" href="../main.css" type="text/css">
+    <link rel="stylesheet" href="../github.css" type="text/css">
+    <script src="../highlight.pack.js"></script>
     <script>
-      for (var number = 1; number <= 100; number++) {
+      for (var number = 1; number <= 100; number++;) {
         if (number % 3 == 0 && number % 5 == 0) {
           console.log("Fizzbuzz");
         } else if (number % 5 == 0) {
@@ -34,3 +36,36 @@
     forgot to make the test return a Boolean value. I added a comparison
     operator to make the test a conditional expression and everything worked
     fine.</p>
+    <hr>
+    <p>SOLUTION</p>
+    <p class="sample-language">JavaScript</p>
+    <pre><code>
+      for (var number = 1; number <= 100; number++;) {
+        if (number % 3 == 0 && number % 5 == 0) {
+          console.log("Fizzbuzz");
+        } else if (number % 5 == 0) {
+          console.log("Buzz");
+        } else if (number % 3 == 0) {
+          console.log("Fizz");
+        } else {
+          console.log(number);
+        }
+      };
+    </pre></code>
+    <p class="sample-language">Ruby</p>
+    <pre><code>
+      1.upto(100) do |x|
+        if x % 3 == 0 && x % 5 == 0 
+          puts "Fizzbuzz"
+        elsif x % 5 == 0 
+          puts "Buzz"
+        elsif x % 3 == 0
+          puts "Fizz"
+        else 
+          puts x
+        end
+      end
+    </pre></code>
+  <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

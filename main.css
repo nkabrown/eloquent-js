@@ -16,3 +16,9 @@ p {
   margin-top: 2em;
   margin-left: 1em;
 }
+
+.sample-language {
+  margin-top: 2em;
+  margin-bottom: 0;
+  margin-left: 0.5em;
+}
