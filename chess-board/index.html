@@ -3,13 +3,15 @@
   <head>
     <title>Eloquent JS &mdash; chpt 2 &mdash; Chess Board</title>
     <link rel="stylesheet" href="../main.css" type="text/css">
+    <link rel="stylesheet" href="../github.css" type="text/css">
+    <script src="../highlight.pack.js"></script>
     <script>
       var size = 8;
       var string = "\n";
 
-      for (var i = 1; i <= size; i++) {
-        for (var j = 1; j <= size; j++) {
-          if ((i + j)% 2 == 0) {
+      for (var i = 1; i <= size; i++;) {
+        for (var j = 1; j <= size; j++;) {
+          if ((i + j) % 2 == 0) {
             string =  string + "#";
           } else {
             string = string + " ";
@@ -44,3 +46,42 @@
     <p># # # #</p>
     <hr>
     <p>View the solution in the console</p>
+    <hr>
+    <p>SOLUTION</p>
+    <p class="sample-language">JavaScript</p>
+    <pre><code class="javascript">
+      var size = 8;
+      var string = "\n";
+
+      for (var i = 1; i <= size; i++;) {
+        for (var j = 1; j <= size; j++;) {
+          if ((i + j) % 2 == 0) {
+            string = string + "#";
+          } else {
+            string = string + " ";
+          }
+        }
+        string = string + "\n";
+      };
+      console.log(string);
+    </pre></code>
+    <p class="sample-language">Ruby</p>
+    <pre><code class="ruby">
+      string = ""
+
+      1.upto(8) do |i|
+        1.upto(8) do |j|
+          if (i + j) % 2 == 0
+            string = string + "#"
+          else
+            string = string + " "
+          end
+        end
+        string = string + "\n"
+      end
+
+      puts string
+    </pre></code>
+  <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
