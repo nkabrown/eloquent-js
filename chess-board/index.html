@@ -4,20 +4,20 @@
     <title>Eloquent JS &mdash; chpt 2 &mdash; Chess Board</title>
     <link rel="stylesheet" href="../main.css" type="text/css">
     <script>
-      var size = 12;
-      var result = "\n";
+      var size = 8;
+      var string = "\n";
 
-      for (i = 1; i <= size; i++) {
-        for (j = 1; j <= size; j++) {
+      for (var i = 1; i <= size; i++) {
+        for (var j = 1; j <= size; j++) {
           if ((i + j)% 2 == 0) {
-            result = result + "#";
+            string =  string + "#";
           } else {
-            result = result + " ";
+            string = string + " ";
           }
         }
-        result = result + "\n";
+        string = string + "\n";
       };
-      console.log(result);
+      console.log(string);
     </script>
   </head>
   <body>
