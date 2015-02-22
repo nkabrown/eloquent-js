@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Eloquent JS &mdash; chpt 3 prob &mdash; Minimum</title>
+    <link rel="stylesheet" href="../main.css" type="text/css">
+    <link rel="stylesheet" href="../github.css" type="text/css">
+    <script type="text/javascript" src="../highlight.pack.js"></script>
+    <script>
+      console.log(min(4, 3));
+
+      function min(num1, num2) {
+        if (num1 == num2)
+          return "These two numbers are equal.";
+        else if (num1 < num2)
+          return num1;
+        else 
+          return num2;
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Eloquent JavaScript</h1>
+    <h2>Chapter 3 &mdash; Functions</h2>
+    <p>Problem 1 - Minimum</p>
+    <hr>
+    <p>The previous chapter introduced the standard function Math.min that
+    returns its smallest argument. We can do that ourselves now. Write a function min that takes two arguments and returns their minimum.</p>
+    <hr>
+    <p>View solution in console</p>
+    <hr>
+    <p>SOLUTION</p>
+    <p class="sample-language">JavaScript</p>
+    <pre><code class="javascript">
+      console.log(min(4, 3));
+
+      function min(num1, num2) {
+        if (num1 == num2)
+          return "These two numbers are equal.";
+        else if (num1 < num2)
+          return num1;
+        else
+          return num2;
+      };
+    </pre></code>
+    <p class="sample-language">Ruby</p>
+    <pre><code class="ruby">
+      def min(num1, num2)
+        if num1 == num2
+          puts "These two numbers are equal."
+        elsif num1 < num2
+          puts num1
+        else
+          puts num2
+        end
+      end
+
+      min(4, 3)
+    </pre></code>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
