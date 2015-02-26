@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Eloquent JS &mdash; chpt 3 prob &mdash; Recursion</title>
+    <link rel="stylesheet" href="../main.css" type="text/css">
+    <link rel="stylesheet" href="../github.css" type="text/css">
+    <script type="text/javascript" src="../highlight.pack.js"></script>
+    <script>
+      function isEven(number) {
+        if (number < 0)
+          return "This number is a negative whole number."
+        else if (number == 0)
+          return "This whole number is true."
+        else if (number == 1)
+          return "This whole number is false."
+        else 
+          return isEven(number - 2)
+      }
+
+      console.log(isEven(-10));
+      console.log(isEven(50));
+      console.log(isEven(75));
+    </script>
+  </head>
+  <body>
+    <h1>Eloquent JavaScript</h1>
+    <h2>Chapter 3 &mdash; Functions</h2>
+    <p>Problem 2 - Recursion</p>
+    <hr>
+    <p>We&rsquo;ve seen that % (the remainder operator) can be used to test
+    whether a number is even or odd by using % 2 to check whether it is
+    divisible by two. Here&rsquo;s another way to define whether a positive
+    whole number is even or odd:</p>
+    <ul>
+      <li>Zero is even.</li>
+      <li>One is odd.</li>
+      <li>For any other number N, its evenness is the same as N - 2.</li>
+    </ul>
+    <p>Define a recursive function isEven corresponding to this description.
+    The function should accept a number parameter and return a Boolean.</p>
+    <p>Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a
+    way to fix this?</p>
+    <hr>
+    <p>View solution in console</p>
+    <hr>
+    <p>SOLUTION</p>
+    <p class=sample-language">JavaScript</p>
+    <pre><code class="javascript">
+      function isEven(number) {
+        if (number < 0)
+          return "This number is a negative whole number."
+        else if (number == 0)
+          return "This whole number is true."
+        else if (number == 1)
+          return "This whole number is false."
+        else 
+          return isEven(number - 2)
+      }
+
+      console.log(isEven(50));
+    </pre></code>
+    <p class="sample-language">Ruby</p>
+    <pre><code class="ruby">
+      def is_even(number)
+        if number < 0
+          print "This number is a negative whole number.\n"
+        elsif number == 0
+          print "This whole number is true.\n"
+        elsif number == 1
+          print "This whole number is false.\n"
+        else
+          print is_even(number - 2)
+        end
+      end
+
+      is_even(50)
+    </pre></code>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

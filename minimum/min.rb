@@ -8,4 +8,4 @@ def min(num1, num2)
   end
 end
 
-min(3, 3)
+min(4, 3)
